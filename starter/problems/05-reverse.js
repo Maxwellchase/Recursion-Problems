@@ -13,6 +13,17 @@ reverse(""); // ""
 ***********************************************************************/
 
 // your code here
+function reverse(string){
+  debugger
+  if(string === ""){
+    return ""
+  }
+  return reverse(string.slice(1)) + string[0]
+
+  // return string[string.length-1] + reverse(string[string.length - 2])
+}
+console.log(reverse("house")); // "esuoh"
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

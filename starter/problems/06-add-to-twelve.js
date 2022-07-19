@@ -5,14 +5,32 @@ return false.
 
 Examples:
 
-addToTwelve([1, 3, 4, 7, 5]); // true
-addToTwelve([1, 3, 4, 7, 6]); // false
-addToTwelve([1, 11, 4, 7, 6]); // true
-addToTwelve([1, 12, 4, 7, 6]); // false
-addToTwelve([1]); // false
+
 ***********************************************************************/
 
 // your code here
+function addToTwelve(array) {
+debugger
+  if(array.length < 2) {
+    return false
+  }
+  if(array[0] + array[1] === 12 ){
+    return true
+  }else {
+    return addToTwelve(array.slice(1)) 
+  }
+}
+// [1, 3, 4, 7, 5] -> 1 + 3
+//[3,4,7,5] -> 3+4
+//[4,7,5] -> 4+7
+//[7,5] -> 7+5 = 12
+
+
+console.log(addToTwelve([1, 3, 4, 7, 6])); // false
+console.log(addToTwelve([1, 12, 4, 7, 6])); // false
+console.log(addToTwelve([1])); // false
+console.log(addToTwelve([1, 3, 4, 7, 5])); // true
+console.log(addToTwelve([1, 11, 4, 7, 6])); // true
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
