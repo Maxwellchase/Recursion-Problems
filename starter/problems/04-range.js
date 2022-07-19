@@ -8,10 +8,11 @@ Examples:
 ***********************************************************************/
 
 function range (start, end) {
+  debugger
   if (end <= start) {
     return [];
   } 
-  return [start,...(range(start + 1, end))]
+  return [start,...(range(start + 1))]
 }
 
 // 1. return [1, ]
