@@ -14,6 +14,9 @@ function range (start, end) {
   return [start,...(range(start + 1, end))]
 }
 
+// 1. return [1, ]
+
+
 // function range(start, end) {
 //   if (end <= start) return [];
 
